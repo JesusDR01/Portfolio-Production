@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const AppWrapper = styled.div`
+    font-family: ember, Arial, sans-serif;
+
     .front-component {
         height: 100vh;
     }
@@ -9,15 +11,20 @@ export const AppWrapper = styled.div`
         font-weight: bolder;
     }
 
-    .mainSwiper > .swiper-button-prev {
-        display: none;
-        position: fixed !important;
-    }
-
-    font-family: ember, Arial, sans-serif !important;
     @font-face {
         font-family: "ember";
         src: local("ember"), url("../../assets/fonts/ember.ttf") format("opentype");
         font-display: swap;
+    }
+
+    .arrow-custom {
+        display: none;
+        position: fixed;
+        background-color: transparent;
+        width: 18px;
+        height: 28px;
+        &::after {
+            font-size: 22px;
+        }
     }
 `;

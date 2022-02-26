@@ -8,7 +8,7 @@ export const PortfolioWrapper = styled.div`
     min-height: 100vh;
     font-size: calc(10px + 2vmin);
     color: white;
-    padding: 35px;
+    padding: 58px;
     .categories {
         width: 100%;
         margin-bottom: 15px;
@@ -17,8 +17,6 @@ export const PortfolioWrapper = styled.div`
     .d-none {
         display: none;
     }
-
-  
 
     #about, #skills, #projects {
         padding-top: 125px;

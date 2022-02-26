@@ -7,7 +7,6 @@ type NavbarProps = {
 };
 
 export const NavbarWrapper = styled.nav<NavbarProps>`
-
     opacity: ${({ showOnScroll }) => (showOnScroll ? 1 : 0)};
     position: fixed;
     display: flex;
@@ -40,7 +39,7 @@ export const NavbarWrapper = styled.nav<NavbarProps>`
     }
 
     ul {
-        display: ${({ show }) => (show  ? "flex" : "none")};
+        display: ${({ show }) => (show ? "flex" : "none")};
         height: ${({ show, expand }) => (show && expand ? "100vh" : "0vh")};
         transition: all 0.3s;
         transform: translateX(${({ show, expand }) => (show && expand ? "0%" : "200%")});
@@ -65,22 +64,23 @@ export const NavbarWrapper = styled.nav<NavbarProps>`
         }
     }
     #switch-wrapper {
-        flex:0.8;
+        flex: 0.8;
         margin: 10px;
         display: flex;
         align-items: center;
-        
 
         #theme-switch {
-            width: 70px;
-            height: 30px;
+            width: 43px;
+            height: 19px;
+
             border-radius: 50px;
             position: relative;
 
             #ball {
                 caret-color: transparent;
-                width: 24px;
-                height: 24px;
+                width: 13px;
+                height: 13px;
+
                 border-radius: 100%;
                 position: absolute;
                 top: 1px;
@@ -104,6 +104,14 @@ export const NavbarWrapper = styled.nav<NavbarProps>`
             margin: 0;
             transform: translateX(${({ show }) => (show ? "0%" : "200%")});
             height: initial;
+        }
+        #theme-switch {
+            width: 70px;
+            height: 30px;
+            #ball {
+                width: 24px;
+                height: 24px;
+            }
         }
     }
 `;

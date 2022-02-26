@@ -9,7 +9,7 @@ import "swiper/swiper.scss";
 import "swiper/components/pagination/pagination.scss";
 import "swiper/components/navigation/navigation.scss";
 
-import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper/core";
+import SwiperCore, { Autoplay, Navigation } from "swiper/core";
 
 import Navbar from "./components/Navbar/Navbar";
 
@@ -20,7 +20,7 @@ import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "src/themes";
 
 // install Swiper modules
-SwiperCore.use([Autoplay, Pagination, Navigation]);
+SwiperCore.use([Autoplay, Navigation]);
 
 const App: React.FC = () => {
     const [theme, setTheme] = useState("dark");
@@ -31,6 +31,7 @@ const App: React.FC = () => {
         const mainArrowPrev = document.querySelector<HTMLElement>(".swiper-button-prev");
         if (mainArrowPrev) {
             mainArrowPrev.style.display = e.isEnd ? "block" : "none";
+            mainArrowPrev.classList.add("arrow-custom");
         }
         const mainArrowNext = document.querySelector<HTMLElement>(".swiper-button-next");
         if (mainArrowNext) {
@@ -52,9 +53,7 @@ const App: React.FC = () => {
                     className="mainSwiper"
                     onSlideChange={setThumbsSwiper}
                     grabCursor={true}
-                    pagination={{
-                        clickable: true,
-                    }}
+                  
                 >
                     <SwiperSlide className="front-component">
                         <FrontPage />

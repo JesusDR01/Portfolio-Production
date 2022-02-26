@@ -14,7 +14,7 @@ export const LanguageTogglerWrapper = styled.div<LanguageTogglerProps>`
         flex: 0.5;
 
         img {
-            width: 100%;
+            width: 30px;
             height: auto;
         }
     }
