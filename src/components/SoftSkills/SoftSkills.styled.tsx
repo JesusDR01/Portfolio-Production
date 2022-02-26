@@ -18,7 +18,14 @@ export const SoftSkillsWrapper = styled.article`
     }
     @media (min-width: 992px) {
         p{
-            width: 327px;
+            width: 373px;
+            margin: 14px;
+            span{
+                font-size: 1.5rem;
+            }
+            img{
+                width: 42px;
+            }
         }
     }
 `;
