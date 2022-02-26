@@ -1,0 +1,105 @@
+{
+    "primarySkills": [
+        {
+            "name": "Node",
+            "img": "assets/svg/skills/Node.svg"
+        },
+        {
+            "name": "React",
+            "img": "assets/svg/skills/React.svg"
+        }
+    ],
+    "secondarySkills": [
+        {
+            "name": "Docker",
+            "img": "assets/svg/skills/Docker.svg"
+        },
+        {
+            "name": "MongoDB",
+            "img": "assets/svg/skills/Mongo.svg"
+        },
+        {
+            "name": "Java",
+            "img": "assets/svg/skills/Java.svg"
+        },
+        {
+            "name": "Typescript",
+            "img": "assets/svg/skills/Typescript.svg"
+        },
+        {
+            "name": "DynamoDB",
+            "img": "assets/svg/skills/Dynamodb.svg"
+        },
+
+        {
+            "name": "Mysqlphp",
+            "img": "assets/svg/skills/Mysqlphp.svg"
+        }
+    ],
+    "softSkills": [
+        "Teamwork",
+        "Problem solving",
+        "Persistent",
+        "Active listening",
+        "Motivation",
+        "Assertiveness"
+    ],
+    "projects": [
+        {
+            "name": "ScrapeJIT",
+            "img": "assets/img/projects/ScrapeJIT.svg",
+            "description": "CLI which allows you to get content from a website and manage global snippets easily using Powertoys run or wox. You can also use OCR to extract text from images.",
+            "repo": "https://github.com/JesusDR01/scrapeJIT"
+        },
+        {
+            "name": "Slizr",
+            "img": "assets/img/projects/Slizr.svg",
+            "description": "Simple game where you have to dodge a red ball with your mouse. You can manage the settings too.",
+            "repo": "https://github.com/JesusDR01/Slizr",
+            "web": "https://slizr.bules.eu/"
+        },
+        {
+            "name": "ClipperApp",
+            "img": "assets/img/projects/Clipperapp.webp",
+            "description": "GUI program built in Java which allows you to save and manage snippets. It is recommended to use with wox or powertoys.",
+            "repo": "https://github.com/JesusDR01/clipperApp"
+        },
+        {
+            "name": "Rurals",
+            "img": "assets/img/projects/Rurals.svg",
+            "description": "Static website made with HTML and CSS.",
+            "repo": "https://github.com/iesgrancapitan-diw/practica12-diw-JesusDR01",
+            "web": "https://iesgrancapitan-diw.github.io/practica12-diw-JesusDR01/src/index.html"
+        },
+        {
+            "name": "Calculator",
+            "img": "assets/img/projects/Calculator.webp",
+            "description": "Simple calculator made with vanilla JavaScript.",
+            "repo": "https://github.com/iesgrancapitan-dwec/calculadora-JesusDR01/",
+            "web": "https://iesgrancapitan-dwec.github.io/calculadora-JesusDR01/"
+        },
+        {
+            "name": "Mastermind",
+            "img": "assets/img/projects/Mastermind.webp",
+            "description": "Popular game made in vanilla JavaScript where you have to guess a secret colours combination.",
+            "repo": "https://github.com/iesgrancapitan-dwec/ud6-a1-mastemind-JesusDR01"
+        }
+    ],
+    "media": [
+        {
+            "name": "LinkedIn",
+            "img": "assets/svg/media/linkedin.svg",
+            "url": "https://www.linkedin.com/in/jesusdr/"
+        },
+        {
+            "name": "Github",
+            "img": "assets/svg/media/github.svg",
+            "url": "https://github.com/JesusDR01"
+        },
+        {
+            "name": "Twitter",
+            "img": "assets/svg/media/twitter.svg",
+            "url": "https://twitter.com/jesusdr01"
+        }
+    ]
+}
