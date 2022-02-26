@@ -5,7 +5,8 @@ export const lightTheme = {
     fontColor: "#000",
     switchWrapperColor: "#000",
     switchBallColor: "#fff",
-    switchTranslate: "150%"
+    switchTranslate: "150%",
+    githubFilter: "",
 };
 
 export const darkTheme = {
@@ -14,6 +15,8 @@ export const darkTheme = {
 
     switchWrapperColor: "#fff",
     switchBallColor: "#000",
+    githubFilter:
+        "invert(100%) sepia(0%) saturate(7494%) hue-rotate(44deg) brightness(112%) contrast(105%)",
 };
 type ThemeProviderProps = {
     theme: {
@@ -22,6 +25,7 @@ type ThemeProviderProps = {
         switchWrapperColor: string;
         switchBallColor: string;
         switchTranslate: string;
+        githubFilter: string;
     };
 };
 
@@ -36,7 +40,11 @@ export const GlobalStyles = createGlobalStyle<ThemeProviderProps>`
         background-color: ${({ theme }) => theme.switchWrapperColor};
     }
     #ball{
-        transform: translateX(${({ theme }) => (theme.switchTranslate)});
+        transform: translateX(${({ theme }) => theme.switchTranslate});
+    }
+
+    .media-github img, #soft-skills img{
+            filter: ${({ theme }) => theme.githubFilter};
     }
     
 `;

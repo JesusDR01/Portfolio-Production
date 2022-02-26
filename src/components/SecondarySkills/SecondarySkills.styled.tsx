@@ -5,7 +5,7 @@ export const SecondarySkillsWrapper = styled.article`
         align-items: center;
     }
     img{
-        width: 100%;
+        width: 70%;
         height: auto;
     }
     @media (min-width: 992px) {

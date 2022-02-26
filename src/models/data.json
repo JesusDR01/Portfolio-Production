@@ -37,12 +37,30 @@
         }
     ],
     "softSkills": [
-        "Teamwork",
-        "Problem solving",
-        "Persistent",
-        "Active listening",
-        "Motivation",
-        "Assertiveness"
+        {
+            "name": "Teamwork",
+            "img": "assets/svg/softSkills/Teamwork.svg"
+        },
+        {
+            "name": "Problem solving",
+            "img": "assets/svg/softSkills/problem-solving.svg"
+        },
+        {
+            "name": "Persistent",
+            "img": "assets/svg/softSkills/persistent.svg"
+        },
+        {
+            "name": "Active listening",
+            "img": "assets/svg/softSkills/active-listening.svg"
+        },
+        {
+            "name": "Motivation",
+            "img": "assets/svg/softSkills/motivation.svg"
+        },
+        {
+            "name": "Assertiveness",
+            "img": "assets/svg/softSkills/assertiveness.svg"
+        }
     ],
     "projects": [
         {
