@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, memo } from "react";
 
 import { Portfolio } from "./components/Portfolio/Portfolio";
 
@@ -44,7 +44,6 @@ const App: React.FC = () => {
                 <GlobalStyles />
                 {<Navbar setTheme={setTheme} show={showNav} />}
                 <Swiper
-                
                     loop={false}
                     navigation={true}
                     slidesPerColumnFill={0 ? "row" : undefined}
@@ -53,7 +52,6 @@ const App: React.FC = () => {
                     className="mainSwiper"
                     onSlideChange={setThumbsSwiper}
                     grabCursor={true}
-                  
                 >
                     <SwiperSlide className="front-component">
                         <FrontPage />

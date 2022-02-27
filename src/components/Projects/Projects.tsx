@@ -1,20 +1,28 @@
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Keyboard, Autoplay, Pagination, Navigation, Scrollbar } from "swiper/core";
+import SwiperCore, {
+    Keyboard,
+    Autoplay,
+    Pagination,
+    Navigation,
+    Scrollbar,
+    Lazy,
+} from "swiper/core";
 import { SwiperDataProject } from "src/models/SwiperDataProject";
 import { ProjectsWrapper } from "./Projects.styled";
 import * as data from "src/models/data.json";
 
 import { useTranslation, TFunction } from "react-i18next";
-SwiperCore.use([Autoplay, Pagination, Navigation, Scrollbar, Keyboard]);
+SwiperCore.use([Autoplay, Pagination, Navigation, Scrollbar, Keyboard, Lazy]);
 let swiperSlides: SwiperDataProject[] = data.projects;
 
-const Projects: React.FC = () => {
+export const Projects = () => {
     const { t } = useTranslation();
     const expandState = useState(false);
     return (
         <ProjectsWrapper expand={expandState[0]}>
             <Swiper
+                lazy={true}
                 keyboard={{
                     enabled: true,
                 }}
