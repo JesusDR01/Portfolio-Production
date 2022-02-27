@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const FooterWrapper = styled.div`
+export const FooterWrapper = styled.footer`
     padding: 24px;
     font-size: 13px;
     font-weight: bold;

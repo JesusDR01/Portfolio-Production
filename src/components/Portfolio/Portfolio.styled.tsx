@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const PortfolioWrapper = styled.div`
+export const PortfolioWrapper = styled.main`
     cursor:initial;
     text-align: center;
 
