@@ -63,7 +63,9 @@ function getSlides(
                 <SwiperSlide key={idx}>
                     <div className="project-technologies">
                         {project.technologies.map((tech, idx) => (
-                            <img key={idx} alt={tech.name} src={tech.img} />
+                            <img     
+                            width="80"
+                            height="80" key={idx} alt={tech.name} src={tech.img} />
                         ))}
                     </div>
                     <div className="project">
