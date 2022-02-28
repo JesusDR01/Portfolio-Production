@@ -1,12 +1,6 @@
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, {
-    Keyboard,
-    Autoplay,
-    Navigation,
-    Scrollbar,
-    Lazy,
-} from "swiper/core";
+import SwiperCore, { Keyboard, Autoplay, Navigation, Scrollbar, Lazy } from "swiper/core";
 import { SwiperDataProject } from "src/models/SwiperDataProject";
 import { ProjectsWrapper } from "./Projects.styled";
 import * as data from "src/models/data.json";
@@ -63,15 +57,13 @@ function getSlides(
                 <SwiperSlide key={idx}>
                     <div className="project-technologies">
                         {project.technologies.map((tech, idx) => (
-                            <img     
-                            width="80"
-                            height="80" key={idx} alt={tech.name} src={tech.img} />
+                            <img width="80" height="80" key={idx} alt={tech.name} src={tech.img} />
                         ))}
                     </div>
                     <div className="project">
                         {
                             <img
-                            className="project-img"
+                                className="project-img"
                                 loading="lazy"
                                 alt={project.name}
                                 src={project.img}
@@ -88,12 +80,10 @@ function getSlides(
                             onClick={() => setExpand(!expand)}
                         />
                         <div className="project-info">
-                            <div className="project-title">
-                                <p>{project.name}</p>
-                            </div>
-                            <div className="project-description">
-                                <p>{t("sections.projects.descriptions")[idx]}</p>
-                            </div>
+                            <p className="project-title">{project.name}</p>
+                            <p className="project-description">
+                                {t("sections.projects.descriptions")[idx]}
+                            </p>
                             <p>
                                 <a href={project.repo} target="_blank" rel="noopener noreferrer">
                                     {t("sections.projects.repository")}

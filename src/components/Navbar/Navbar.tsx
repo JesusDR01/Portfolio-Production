@@ -1,11 +1,11 @@
-import { Dispatch, SetStateAction, useEffect, useState } from "react";
+import { Dispatch, SetStateAction, useEffect, useState, memo } from "react";
 import LanguageToggler from "../LanguageToggler/LanguageToggler";
 import { NavbarWrapper } from "./Navbar.styled";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun, faBars } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
 
-export const Navbar = ({
+export const Navbar = memo(({
     show = false,
     setTheme,
 }: {
@@ -75,6 +75,6 @@ export const Navbar = ({
             </ul>
         </NavbarWrapper>
     );
-};
+});
 
 export default Navbar;
