@@ -4,6 +4,11 @@
         "title": "Descargar CV",
         "url": "assets/cv/JesusDiazRivas_CV_ESP.pdf"
     },
+    "languageToggler": {
+        "EN": "Mostrar web en inglés",
+        "ES": "Mostrar web en español"
+    },
+    "themeToggler": "Cambiar tema oscuro/claro",
     "sections": {
         "skills": {
             "title": "Habilidades",
@@ -39,7 +44,8 @@
                 "Este portfolio!"
             ],
             "repository": "Repositorio",
-            "loading": "Cargando proyectos..."
+            "loading": "Cargando proyectos...",
+            "expandTitle": "Mostrar/Ocultar más información de"
         }
     },
     "footer": {

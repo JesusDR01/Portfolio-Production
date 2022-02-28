@@ -10,7 +10,7 @@ export const SoftSkills = () => {
             {data.softSkills.map((skill, idx) => (
                 <p key={idx}>
                     <span>{skills[idx]}</span>
-                    <img src={skill.img} alt={skills[idx]} height="10" width="10" />
+                    <img title={skill.name} src={skill.img} alt={skills[idx]} height="10" width="10" />
                 </p>
             ))}
         </SoftSkillsWrapper>

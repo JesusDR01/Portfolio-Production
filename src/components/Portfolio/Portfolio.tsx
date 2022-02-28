@@ -6,9 +6,8 @@ import { useTranslation } from "react-i18next";
 
 export const Portfolio = () => {
 const { t } = useTranslation();
-
     return (
-        <PortfolioWrapper id="portfolio">
+        <PortfolioWrapper id="portfolio" tabIndex={0}>
             <h2 id="skills">{t("sections.skills.title")}</h2>
             <Skills />
             <h2 id="projects">{t("sections.projects.title")}</h2>

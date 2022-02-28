@@ -41,7 +41,7 @@ function getSlides(data: SwiperDataSkill[] | undefined) {
         data.forEach((skill, idx) => {
             swiperSlides.push(
                 <SwiperSlide key={idx}>
-                    {<img loading='lazy' alt={skill.name} src={skill.img} height="250" width="250" />}
+                    {<img title={skill.name} loading='lazy' alt={skill.name} src={skill.img} height="250" width="250" />}
                 </SwiperSlide>
             );
         });

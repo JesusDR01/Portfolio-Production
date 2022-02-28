@@ -8,7 +8,7 @@ const { t } = useTranslation();
         <MainSkillsWrapper>
             <h2>{t("sections.skills.articles.main.title")}</h2>
             {data.primarySkills.map((skill, idx) => {
-                return <img key={idx} src={skill.img} alt={skill.name} width="250" height="250"/>;
+                return <img title={skill.name} key={idx} src={skill.img} alt={skill.name} width="250" height="250"/>;
             })}
         </MainSkillsWrapper>
     );

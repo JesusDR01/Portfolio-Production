@@ -1,5 +1,6 @@
 import { LanguageTogglerWrapper } from "./LanguageToggler.styled";
 import { useTranslation } from 'react-i18next';
+import { t } from "i18next";
 
 export const LanguageToggler = () => {
     const {i18n} = useTranslation();
@@ -10,10 +11,10 @@ export const LanguageToggler = () => {
     return (
         <LanguageTogglerWrapper>
             <button onClick={() => changeLanguage('en')}>
-                <img width="60" height="60" alt="UK flag" src="assets/svg/countries/united-kingdom.svg" />
+                <img title={t("languageToggler.EN")} width="60" height="60" alt="UK flag" src="assets/svg/countries/united-kingdom.svg" />
             </button>
-            <button>
-                <img width="60" height="60" onClick={() => changeLanguage('es-ES')} alt="Spain flag" src="assets/svg/countries/spain.svg" />
+            <button onClick={() => changeLanguage('es-ES')}>
+                <img title={t("languageToggler.ES")} width="60" height="60" alt="Spain flag" src="assets/svg/countries/spain.svg" />
             </button>
         </LanguageTogglerWrapper>
     );

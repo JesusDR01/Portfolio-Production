@@ -51,6 +51,7 @@ export const Navbar = memo(({
                     <div id="switch-wrapper">
                         <FontAwesomeIcon icon={faMoon} />
                         <button
+                            title={t("themeToggler")}
                             id="theme-switch"
                             aria-label="Switch dark/light theme"
                             onClick={() =>
@@ -68,8 +69,8 @@ export const Navbar = memo(({
             </div>
             <ul>
                 {liList.map((li, idx) => (
-                    <a key={idx} href={li.href}>
-                        <li onClick={toggle}>{li.content}</li>
+                    <a  key={idx} href={li.href}>
+                        <li tabIndex={0} onClick={toggle}>{li.content}</li>
                     </a>
                 ))}
             </ul>

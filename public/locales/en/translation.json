@@ -4,6 +4,11 @@
         "title": "Download CV",
         "url": "assets/cv/JesusDiazRivas_CV_ENG.pdf"
     },
+    "languageToggler": {
+        "EN": "Show website in english",
+        "ES": "Show website in spanish"
+    },
+    "themeToggler": "Change dark/light theme",
     "sections": {
         "skills": {
             "title": "Skills",
@@ -39,7 +44,8 @@
                 "This portfolio!"
             ],
             "repository": "Repository",
-            "loading": "Loading projects..."
+            "loading": "Loading projects...",
+            "expandTitle": "Show/Hide more information about"
         }
     },
     "footer": {
