@@ -6,4 +6,5 @@ export class SwiperDataProject {
   description: string = '';
   repo?: string = '';
   web?: string = '';
+  technologies: {name: string, img:string}[] = [];
 }

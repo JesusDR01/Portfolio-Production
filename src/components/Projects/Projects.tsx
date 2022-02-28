@@ -3,7 +3,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, {
     Keyboard,
     Autoplay,
-    Pagination,
     Navigation,
     Scrollbar,
     Lazy,
@@ -13,10 +12,10 @@ import { ProjectsWrapper } from "./Projects.styled";
 import * as data from "src/models/data.json";
 
 import { useTranslation, TFunction } from "react-i18next";
-SwiperCore.use([Autoplay, Pagination, Navigation, Scrollbar, Keyboard, Lazy]);
+SwiperCore.use([Autoplay, Navigation, Scrollbar, Keyboard, Lazy]);
 let swiperSlides: SwiperDataProject[] = data.projects;
 
-export const Projects = () => {
+const Projects = () => {
     const { t } = useTranslation();
     const expandState = useState(false);
     return (
@@ -31,9 +30,6 @@ export const Projects = () => {
                 navigation={true}
                 slidesPerColumnFill={0 ? "row" : undefined}
                 autoHeight={true}
-                pagination={{
-                    clickable: true,
-                }}
                 breakpoints={{
                     768: {
                         slidesPerView: 1,
@@ -65,34 +61,50 @@ function getSlides(
         data.forEach((project, idx) => {
             swiperSlides.push(
                 <SwiperSlide key={idx}>
-                    {<img alt={project.name} src={project.img} width="350" height="400" />}
-                    <img
-                        width="44"
-                        height="44"
-                        className="arrow-expand"
-                        src="assets/svg/arrowExpand.svg"
-                        alt="arrowExpand"
-                        onClick={() => setExpand(!expand)}
-                    />
-                    <div className="project-info">
-                        <div className="project-title">
-                            <p>{project.name}</p>
-                        </div>
-                        <div className="project-description">
-                            <p>{t("sections.projects.descriptions")[idx]}</p>
-                        </div>
-                        <p>
-                            <a href={project.repo} target="_blank" rel="noopener noreferrer">
-                                {t("sections.projects.repository")}
-                            </a>
-                        </p>
-                        {project.web && (
+                    <div className="project-technologies">
+                        {project.technologies.map((tech, idx) => (
+                            <img key={idx} alt={tech.name} src={tech.img} />
+                        ))}
+                    </div>
+                    <div className="project">
+                        {
+                            <img
+                            className="project-img"
+                                loading="lazy"
+                                alt={project.name}
+                                src={project.img}
+                                width="350"
+                                height="400"
+                            />
+                        }
+                        <img
+                            width="44"
+                            height="44"
+                            className="arrow-expand"
+                            src="assets/svg/arrowExpand.svg"
+                            alt="arrowExpand"
+                            onClick={() => setExpand(!expand)}
+                        />
+                        <div className="project-info">
+                            <div className="project-title">
+                                <p>{project.name}</p>
+                            </div>
+                            <div className="project-description">
+                                <p>{t("sections.projects.descriptions")[idx]}</p>
+                            </div>
                             <p>
-                                <a href={project.web} target="_blank" rel="noopener noreferrer">
-                                    Web
+                                <a href={project.repo} target="_blank" rel="noopener noreferrer">
+                                    {t("sections.projects.repository")}
                                 </a>
                             </p>
-                        )}
+                            {project.web && (
+                                <p>
+                                    <a href={project.web} target="_blank" rel="noopener noreferrer">
+                                        Web
+                                    </a>
+                                </p>
+                            )}
+                        </div>
                     </div>
                 </SwiperSlide>
             );

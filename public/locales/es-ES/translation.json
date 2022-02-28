@@ -1,5 +1,9 @@
 {
     "about": "Soy un estudiante de desarrollo de aplicaciones web de Córdoba enfocado en Front end.",
+    "cv": {
+        "title": "Descargar CV",
+        "url": "assets/cv/JesusDiazRivas_CV_ESP.pdf"
+    },
     "sections": {
         "skills": {
             "title": "Habilidades",
@@ -31,9 +35,11 @@
                 "Programa con interfaz gráfica construido en java que te permite guardar y manejar snippets. Se recomienda usar con wox o powertoys.",
                 "Sitio web estático hecho con HTML y CSS.",
                 "Calculadora simple hecha con vanilla JavaScript.",
-                "Popular juego hecho en vanilla JavaScript donde tienes que adivinar una combinación de colores secreta."
+                "Popular juego hecho en vanilla JavaScript donde tienes que adivinar una combinación de colores secreta.",
+                "Este portfolio!"
             ],
-            "repository": "Repositorio"
+            "repository": "Repositorio",
+            "loading": "Cargando proyectos..."
         }
     },
     "footer": {

@@ -5,7 +5,7 @@ export default {
   title: "Portfolio",
 };
 
-export const Default = () => <Portfolio/>;
+export const Default = () => <Portfolio />;
 
 Default.story = {
   name: 'default',

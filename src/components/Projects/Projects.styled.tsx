@@ -8,16 +8,17 @@ export const ProjectsWrapper = styled.section<ProjectsProps>`
     .swiper-wrapper {
         height: auto !important;
         align-items: center;
-        img {
-            width: 69%;
+        .project-img {
+            width: 55%;
             height: auto;
         }
         .arrow-expand {
+            top: ${({ expand }) => (expand ? "initial" : "0")};
             transition: all 0.5s;
-            width: 40px;
+            width: 26px;
             position: absolute;
-            height: 40px;
-            right: 15.5%;
+            height: 28px;
+            right: 22.5%;
             filter: invert(40%) sepia(47%) saturate(2646%) hue-rotate(166deg) brightness(101%)
                 contrast(101%);
             background: #2745148f;
@@ -25,25 +26,20 @@ export const ProjectsWrapper = styled.section<ProjectsProps>`
             border: 2px solid white;
             transform: ${({ expand }) => (expand ? "rotate(180deg)" : "initial")};
             bottom: ${({ expand }) => (expand ? "0.1%" : "initial")};
-            left: ${({ expand }) => (expand ? "15.5%" : "initial")};
-            z-index: 1;
+            left: ${({ expand }) => (expand ? "2.5%" : "initial")};
+            z-index: 999;
         }
     }
-    .swiperSlide {
-        display: flex;
-        padding: 10px;
-        align-items: center;
-        justify-content: center;
-    }
+
     .project-info {
         overflow-y: auto;
         transition: all 0.5s;
         opacity: ${({ expand }) => (expand ? "1" : "0")};
-        width: 69%;
+        width: 55%;
         position: absolute;
         top: 0;
         font-size: 14px;
-        right: 15.5%;
+        right: 22.5%;
         flex-direction: column-reverse;
         height: 100%;
         background: #0f1520ab;
@@ -58,24 +54,41 @@ export const ProjectsWrapper = styled.section<ProjectsProps>`
             color: white;
         }
     }
+    .project-technologies {
+        top: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        img {
+            margin: 8px 2px;
+            height: 8vh;
+            vertical-align: top;
+        }
+    }
+    .project {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
 
     @media (min-width: 992px) {
         .swiper-wrapper {
             height: auto !important;
             align-items: center;
-            img {
+            .project-img {
                 width: ${width}%;
             }
             .arrow-expand {
                 right: 26%;
                 left: ${({ expand }) => (expand ? `26%` : "initial")};
-                bottom: ${({ expand }) => (expand ? "2.5%" : "initial")};
+                bottom: ${({ expand }) => (expand ? "0%" : "initial")};
             }
         }
         .project-info {
             width: 48%;
             right: 26%;
-            height: 97.7%;
             p {
                 font-size: 1.1rem;
                 margin: 10px;

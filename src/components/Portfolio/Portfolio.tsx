@@ -1,8 +1,9 @@
 import Footer from "../Footer/Footer";
 import Skills from "../Skills/Skills";
 import Projects from "../Projects/Projects";
-import { PortfolioWrapper } from "./Portfolio.styled";
+import  {PortfolioWrapper}  from "./Portfolio.styled";
 import { useTranslation } from "react-i18next";
+
 export const Portfolio = () => {
 const { t } = useTranslation();
 

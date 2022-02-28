@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { Portfolio } from "./components/Portfolio/Portfolio";
+import {Portfolio} from "./components/Portfolio/Portfolio";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -9,7 +9,7 @@ import "swiper/swiper.scss";
 import "swiper/components/pagination/pagination.scss";
 import "swiper/components/navigation/navigation.scss";
 
-import SwiperCore, { Autoplay, Navigation } from "swiper/core";
+import SwiperCore, { Autoplay, Navigation, Lazy } from "swiper/core";
 
 import Navbar from "./components/Navbar/Navbar";
 
@@ -20,7 +20,7 @@ import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "src/themes";
 
 // install Swiper modules
-SwiperCore.use([Autoplay, Navigation]);
+SwiperCore.use([Autoplay, Navigation,Lazy]);
 
 const App: React.FC = () => {
     const [theme, setTheme] = useState("dark");
@@ -52,6 +52,7 @@ const App: React.FC = () => {
                     className="mainSwiper"
                     onSlideChange={setThumbsSwiper}
                     grabCursor={true}
+                    lazy={true}
                 >
                     <SwiperSlide className="front-component">
                         <FrontPage />

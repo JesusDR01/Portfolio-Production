@@ -31,7 +31,7 @@ type ThemeProviderProps = {
 
 export const GlobalStyles = createGlobalStyle<ThemeProviderProps>`
     
-	#portfolio, body, ::-webkit-scrollbar-track,p,h1,nav, nav a, nav li, .mainSwiper > .swiper-button-next, .mainSwiper > .swiper-button-prev,#theme-switch, #ball {
+	#portfolio, body, ::-webkit-scrollbar-track,p,h1,nav, nav a, nav li, .mainSwiper > .swiper-button-next, .mainSwiper > .swiper-button-prev,#theme-switch, #ball, .cv {
         background-color: ${({ theme }) => theme.body};
         color: ${({ theme }) => theme.fontColor};
 	}
