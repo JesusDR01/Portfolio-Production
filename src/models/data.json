@@ -151,6 +151,7 @@
             "img": "assets/img/projects/Mastermind.webp",
             "description": "Popular game made in vanilla JavaScript where you have to guess a secret colours combination.",
             "repo": "https://github.com/iesgrancapitan-dwec/ud6-a1-mastemind-JesusDR01",
+            "web": "https://iesgrancapitan-dwec.github.io/ud6-a1-mastemind-JesusDR01/",
             "technologies": [
                 {
                     "name": "HTML",

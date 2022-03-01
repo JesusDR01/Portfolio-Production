@@ -8,7 +8,11 @@
         "EN": "Show website in english",
         "ES": "Show website in spanish"
     },
-    "themeToggler": "Change dark/light theme",
+    "themeToggler": {
+        "switch": "Change dark/light theme",
+        "light": "Light theme",
+        "dark": "Dark theme"
+    },
     "sections": {
         "skills": {
             "title": "Skills",

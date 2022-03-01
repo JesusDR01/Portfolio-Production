@@ -8,7 +8,11 @@
         "EN": "Mostrar web en inglés",
         "ES": "Mostrar web en español"
     },
-    "themeToggler": "Cambiar tema oscuro/claro",
+    "themeToggler": {
+        "switch": "Cambiar tema oscuro/claro",
+        "light": "Tema claro",
+        "dark": "Tema oscuro"
+    },
     "sections": {
         "skills": {
             "title": "Habilidades",

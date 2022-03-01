@@ -7,7 +7,6 @@ type NavbarProps = {
 };
 
 export const NavbarWrapper = styled.nav<NavbarProps>`
-    opacity: ${({ showOnScroll }) => (showOnScroll ? 1 : 0)};
     position: fixed;
     display: flex;
     padding: 35px 45px;
@@ -16,12 +15,15 @@ export const NavbarWrapper = styled.nav<NavbarProps>`
     z-index: 2;
     flex-direction: column;
     transition: opacity 0.3s, height 0.3s;
+    opacity: ${({ showOnScroll, expand }) => (showOnScroll || expand ? 1 : 0)};
+
     #nav-toggle {
         display: ${({ show }) => (show ? "flex" : "none")};
     }
     #navActions {
         justify-content: space-between;
-        display: ${({ showOnScroll, show }) => (showOnScroll || !show ? "flex" : "none")};
+
+        display: flex;
     }
     #extraBtnsWrapper {
         display: flex;
@@ -40,7 +42,7 @@ export const NavbarWrapper = styled.nav<NavbarProps>`
 
     ul {
         display: ${({ show }) => (show ? "flex" : "none")};
-        height: ${({ show, expand }) => (show && expand ? "100vh" : "0vh")};
+        height: ${({ show, expand }) => (expand ? "100vh" : "0vh")};
         transition: all 0.3s;
         transform: translateX(${({ show, expand }) => (show && expand ? "0%" : "200%")});
         padding-left: 0px;
@@ -49,7 +51,6 @@ export const NavbarWrapper = styled.nav<NavbarProps>`
         align-items: center;
 
         a {
-            display: ${({ showOnScroll }) => (showOnScroll ? "flex" : "none")};
             text-decoration: none;
         }
         li {
@@ -68,8 +69,11 @@ export const NavbarWrapper = styled.nav<NavbarProps>`
         margin: 10px;
         display: flex;
         align-items: center;
-
+        #light-icon {
+            margin-left: 2px;
+        }
         #theme-switch {
+            cursor: pointer;
             width: 43px;
             height: 19px;
 
@@ -94,6 +98,10 @@ export const NavbarWrapper = styled.nav<NavbarProps>`
         flex-direction: row;
         justify-content: space-between;
         height: initial;
+        ul,
+        #nav-toggle {
+            opacity: ${({ showOnScroll }) => (showOnScroll ? 1 : 0)};
+        }
         #nav-toggle {
             display: none;
         }

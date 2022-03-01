@@ -44,14 +44,14 @@ export const Navbar = memo(({
     }, []);
 
     return (
-        <NavbarWrapper show={show && showOnScroll} showOnScroll={showOnScroll} expand={expandNav}>
+        <NavbarWrapper show={show} showOnScroll={showOnScroll} expand={expandNav}>
             <div id="navActions">
                 <div id="extraBtnsWrapper">
                     <LanguageToggler />
                     <div id="switch-wrapper">
-                        <FontAwesomeIcon icon={faMoon} />
+                        <FontAwesomeIcon title={t("themeToggler.dark")} icon={faMoon} />
                         <button
-                            title={t("themeToggler")}
+                            title={t("themeToggler.switch")}
                             id="theme-switch"
                             aria-label="Switch dark/light theme"
                             onClick={() =>
@@ -60,7 +60,7 @@ export const Navbar = memo(({
                         >
                             <div id="ball"></div>
                         </button>
-                        <FontAwesomeIcon icon={faSun} />
+                        <FontAwesomeIcon id="light-icon" title={t("themeToggler.light")} icon={faSun} />
                     </div>
                 </div>
                 <button id="nav-toggle" aria-label="Show menu" onClick={toggle}>
