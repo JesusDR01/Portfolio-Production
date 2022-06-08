@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, Navigation, Scrollbar, Lazy } from "swiper/core";
 import { SwiperDataProject } from "src/models/SwiperDataProject";
 import { ProjectsWrapper } from "./Projects.styled";
-import * as data from "src/models/data.json";
+import data from "src/models/data.json";
 
 import { useTranslation, TFunction } from "react-i18next";
 SwiperCore.use([Autoplay, Navigation, Scrollbar, Lazy]);

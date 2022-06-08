@@ -1,7 +1,7 @@
 import SwiperCore, { Autoplay, Pagination, Navigation, Lazy } from "swiper/core";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { SwiperDataSkill } from "src/models/SwiperDataSkill";
-import * as data from "src/models/data.json";
+import data from "src/models/data.json";
 import { SecondarySkillsWrapper } from "./SecondarySkills.styled";
 import { useTranslation } from "react-i18next";
 SwiperCore.use([Autoplay, Pagination, Navigation, Lazy]);

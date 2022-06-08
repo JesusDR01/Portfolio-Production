@@ -1,6 +1,6 @@
 import { SoftSkillsWrapper } from "./SoftSkills.styled";
 import { useTranslation } from "react-i18next";
-import * as data from "src/models/data.json";
+import data from "src/models/data.json";
 export const SoftSkills = () => {
     const { t } = useTranslation();
     const skills: string[] = Array.from(t("sections.skills.articles.soft.content"));
