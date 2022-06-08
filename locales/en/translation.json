@@ -1,5 +1,18 @@
 {
     "about": "I am a Vocational and educational training on web application development student from Córdoba, Spain focused in front end development.",
+    "cv": {
+        "title": "Download CV",
+        "url": "assets/cv/JesusDiazRivas_CV_ENG.pdf"
+    },
+    "languageToggler": {
+        "EN": "Show website in english",
+        "ES": "Show website in spanish"
+    },
+    "themeToggler": {
+        "switch": "Change dark/light theme",
+        "light": "Light theme",
+        "dark": "Dark theme"
+    },
     "sections": {
         "skills": {
             "title": "Skills",
@@ -31,9 +44,12 @@
                 "GUI program built in Java which allows you to save and manage snippets. It is recommended to use with wox or powertoys.",
                 "Static website made with HTML and CSS.",
                 "Simple calculator made with vanilla JavaScript.",
-                "Popular game made in vanilla JavaScript where you have to guess a secret colours combination."
+                "Popular game made in vanilla JavaScript where you have to guess a secret colours combination.",
+                "This portfolio!"
             ],
-            "repository": "Repository"
+            "repository": "Repository",
+            "loading": "Loading projects...",
+            "expandTitle": "Show/Hide more information about"
         }
     },
     "footer": {
