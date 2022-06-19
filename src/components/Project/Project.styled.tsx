@@ -10,7 +10,6 @@ scroll-snap-align: center;
     flex-direction: column;
     align-items: center;
     position: relative;
-    border: 1px solid white;
     border-radius: 20px;
     overflow: hidden;
     min-width: 100%;
@@ -25,7 +24,7 @@ scroll-snap-align: center;
         justify-content: center;
         min-width: auto;
         img {
-            width: 72% !important;
+            max-width: 44% !important;
             object-fit: contain !important;
         }
     }
@@ -54,15 +53,9 @@ scroll-snap-align: center;
         height: auto;
     }
     .project-info {
-        border-top: 1px solid white;
         transition: all 0.5s;
         top: 0;
-        font-size: 14px;
-        right: 22.5%;
         flex-direction: column-reverse;
-        height: 100%;
-        background: #0f1520ab;
-        color: white;
         justify-content: flex-end;
 
         a {
@@ -70,10 +63,6 @@ scroll-snap-align: center;
         }
         .project-description {
             margin: 10px;
-        }
-        p {
-            background-color: initial;
-            color: white;
         }
     }
 
@@ -86,17 +75,6 @@ scroll-snap-align: center;
             }
             .arrow-expand {
                 right: 26%;
-            }
-        }
-        .project-info {
-            width: 48%;
-            right: 26%;
-            p {
-                font-size: 1.1rem;
-                margin: 10px;
-            }
-            a {
-                font-size: 2rem;
             }
         }
     }

@@ -36,7 +36,7 @@ export const GlobalStyles = createGlobalStyle<ThemeProviderProps>`
     html{
         scroll-snap-type: y mandatory;
     }
-	#portfolio, body, ::-webkit-scrollbar-track,p,h1,nav, nav a, nav li,#theme-switch, #ball, .cv, .badges a, #swipe-advise {
+	#portfolio, body, ::-webkit-scrollbar-track,p,h1,nav, nav a, nav li,#theme-switch, #ball, .cv, .badges a, #swipe-advise, .project-info, .project-info p {
         background-color: ${({ theme }) => theme.body};
         color: ${({ theme }) => theme.fontColor};
 	}
@@ -55,7 +55,7 @@ export const GlobalStyles = createGlobalStyle<ThemeProviderProps>`
             filter: ${({ theme }) => theme.githubFilter};
     }
 
-    .badge{
+    .badge, .project{
         border: 1px solid ${({ theme }) => theme.border};
     }
 

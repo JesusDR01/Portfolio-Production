@@ -14,16 +14,6 @@ export const Badges = () => {
         }
     }, [isBiggerThanMobile]);
 
-    useEffect(() => {
-        if (viewMore) {
-            if (typeof window !== "undefined") {
-                const { swiper } = window as any;
-                swiper.updateAutoHeight();
-                // console.log(window.swiper);
-            }
-        }
-    }, [viewMore]);
-
     return (
         <StyledBadges className="badges">
             {data.primarySkills.map((data, i) => (

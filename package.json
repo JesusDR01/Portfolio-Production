@@ -50,7 +50,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "generate": "plop"
+    "generate": "plop",
+    "export": "next export"
   },
   "eslintConfig": {
     "extends": [
