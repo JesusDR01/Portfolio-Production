@@ -1,18 +1,5 @@
 {
-    "about": "Soy un estudiante de desarrollo de aplicaciones web de Córdoba enfocado en Front end.",
-    "cv": {
-        "title": "Descargar CV",
-        "url": "assets/cv/JesusDiazRivas_CV_ESP.pdf"
-    },
-    "languageToggler": {
-        "EN": "Mostrar web en inglés",
-        "ES": "Mostrar web en español"
-    },
-    "themeToggler": {
-        "switch": "Cambiar tema oscuro/claro",
-        "light": "Tema claro",
-        "dark": "Tema oscuro"
-    },
+
     "sections": {
         "skills": {
             "title": "Habilidades",
@@ -39,6 +26,8 @@
         "projects": {
             "title": "Proyectos",
             "descriptions": [
+                "Trabajo de fin de estudios. Aplicación web que permite importar criptodivisas de Binance, Kucoin y billeteras, enviarlas e intercambiarlas. Así como consultar NFT's.",
+                "Aplicación web que permite descargar libros de forma gratuita mediante web scraping a booksvooks.com",
                 "Interfaz de línea de comandos que te permite obtener contenido de páginas web y manejar snippets globales fácilmente utilizando PowerToys o Wox. También admite OCR para extraer texto a partir de una imagen.",
                 "Simple juego en el que debes esquivar la bola con tu ratón. También puedes cambiar su configuración.",
                 "Programa con interfaz gráfica construido en java que te permite guardar y manejar snippets. Se recomienda usar con wox o powertoys.",

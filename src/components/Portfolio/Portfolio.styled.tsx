@@ -19,7 +19,7 @@ export const PortfolioWrapper = styled.main`
     }
 
     #about, #skills, #projects {
-        padding-top: 125px;
+        padding-top: 0px;
         margin-top: 0;
     }
 `;

@@ -1,0 +1,12 @@
+{
+
+    "languageToggler": {
+        "EN": "Mostrar web en inglés",
+        "ES": "Mostrar web en español"
+    },
+    "themeToggler": {
+        "switch": "Cambiar tema oscuro/claro",
+        "light": "Tema claro",
+        "dark": "Tema oscuro"
+    }
+}

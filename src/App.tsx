@@ -1,13 +1,10 @@
-import {  useState } from "react";
+import { useEffect, useState } from "react";
 
-import {Portfolio} from "./components/Portfolio/Portfolio";
+import { Portfolio } from "./components/Portfolio/Portfolio";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
-import "swiper/swiper.scss";
-import "swiper/components/pagination/pagination.scss";
-import "swiper/components/navigation/navigation.scss";
 
 import SwiperCore, { Autoplay, Navigation, Lazy, Keyboard } from "swiper/core";
 
@@ -20,27 +17,29 @@ import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "src/themes";
 
 // install Swiper modules
-SwiperCore.use([Autoplay, Navigation,Lazy, Keyboard]);
+SwiperCore.use([Autoplay, Navigation, Lazy, Keyboard]);
 
 const App: React.FC = () => {
     const [theme, setTheme] = useState("dark");
-
     const [showNav, setShowNav] = useState(false);
     const setThumbsSwiper = (e: any) => {
         setShowNav(e.isEnd);
-        const mainArrowPrev = document.querySelector<HTMLElement>(".swiper-button-prev");
-        if (mainArrowPrev) {
-            mainArrowPrev.style.display = e.isEnd ? "block" : "none";
-            mainArrowPrev.classList.add("arrow-custom");
-        }
         const mainArrowNext = document.querySelector<HTMLElement>(".swiper-button-next");
         if (mainArrowNext) {
             mainArrowNext.style.display = e.isEnd ? "none" : "block";
         }
     };
+    useEffect(() => {
+        const mainArrowPrev = document.querySelector<HTMLElement>(".swiper-button-prev");
+        if (mainArrowPrev) {
+            mainArrowPrev.style.display = showNav ? "block" : "none";
+            mainArrowPrev.classList.add("arrow-custom");
+        }
+    }, [showNav]);
+
     return (
         <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
-            <AppWrapper>
+            <AppWrapper className="animate__animated animate__fadeIn">
                 <GlobalStyles />
                 {<Navbar setTheme={setTheme} show={showNav} />}
                 <Swiper
@@ -61,7 +60,7 @@ const App: React.FC = () => {
                     <SwiperSlide tabIndex={0} className="front-component">
                         <FrontPage />
                     </SwiperSlide>
-                    <SwiperSlide >
+                    <SwiperSlide>
                         <Portfolio />
                     </SwiperSlide>
                 </Swiper>

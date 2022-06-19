@@ -1,0 +1,11 @@
+{
+    "languageToggler": {
+        "EN": "Show website in english",
+        "ES": "Show website in spanish"
+    },
+    "themeToggler": {
+        "switch": "Change dark/light theme",
+        "light": "Light theme",
+        "dark": "Dark theme"
+    }
+}

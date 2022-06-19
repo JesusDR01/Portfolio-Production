@@ -1,21 +1,33 @@
 import { LanguageTogglerWrapper } from "./LanguageToggler.styled";
-import { useTranslation } from 'react-i18next';
-import { t } from "i18next";
+import { useTranslation } from "next-i18next";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 export const LanguageToggler = () => {
-    const {i18n} = useTranslation();
-    const changeLanguage = (lng:string) => {
-      i18n.changeLanguage(lng);
-    };
+    const { t } = useTranslation(["common"]);
+
+    const { pathname } = useRouter();
 
     return (
         <LanguageTogglerWrapper>
-            <button onClick={() => changeLanguage('en')}>
-                <img title={t("languageToggler.EN")} width="60" height="60" alt="UK flag" src="assets/svg/countries/united-kingdom.svg" />
-            </button>
-            <button onClick={() => changeLanguage('es-ES')}>
-                <img title={t("languageToggler.ES")} width="60" height="60" alt="Spain flag" src="assets/svg/countries/spain.svg" />
-            </button>
+            <Link href={pathname} locale="en">
+                <img
+                    title={t("languageToggler.EN")}
+                    width="60"
+                    height="60"
+                    alt="UK flag"
+                    src="assets/svg/countries/united-kingdom.svg"
+                />
+            </Link>
+            <Link href={pathname} locale="es-ES">
+                <img
+                    title={t("languageToggler.ES")}
+                    width="60"
+                    height="60"
+                    alt="Spain flag"
+                    src="assets/svg/countries/spain.svg"
+                />
+            </Link>
         </LanguageTogglerWrapper>
     );
 };

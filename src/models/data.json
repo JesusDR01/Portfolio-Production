@@ -64,6 +64,58 @@
     ],
     "projects": [
         {
+            "name": "CoinHolder",
+            "img": "assets/img/projects/Coinholder.svg",
+            "description": "CLI which allows you to get content from a website and manage global snippets easily using Powertoys run or wox. You can also use OCR to extract text from images.",
+            "web": "https://www.coinholder.tech/",
+            "technologies": [
+                {
+                    "name": "React",
+                    "img": "assets/svg/technologies/nodejs.svg"
+                },
+                {
+                    "name": "NodeJs",
+                    "img": "assets/svg/technologies/nodejs.svg"
+                },
+                {
+                    "name": "Moralis",
+                    "img": "assets/svg/technologies/nodejs.svg"
+                },
+                {
+                    "name": "MongoDB",
+                    "img": "assets/svg/technologies/nodejs.svg"
+                }
+            ]
+        },
+        {
+            "name": "BooksFreeSocket",
+            "img": "assets/img/projects/BooksFreeSocket.jpg",
+            "description": "CLI which allows you to get content from a website and manage global snippets easily using Powertoys run or wox. You can also use OCR to extract text from images.",
+            "repo": "https://github.com/teraOwl/pdf-client",
+            "technologies": [
+                {
+                    "name": "React",
+                    "img": "assets/svg/technologies/nodejs.svg"
+                },
+                {
+                    "name": "NodeJs",
+                    "img": "assets/svg/technologies/nodejs.svg"
+                },
+                {
+                    "name": "SocketIO",
+                    "img": "assets/svg/technologies/nodejs.svg"
+                },
+                {
+                    "name": "S3 Bucket",
+                    "img": "assets/svg/technologies/nodejs.svg"
+                },
+                {
+                    "name": "DynamoDB",
+                    "img": "assets/svg/technologies/nodejs.svg"
+                }
+            ]
+        },
+        {
             "name": "ScrapeJIT",
             "img": "assets/img/projects/ScrapeJIT.svg",
             "description": "CLI which allows you to get content from a website and manage global snippets easily using Powertoys run or wox. You can also use OCR to extract text from images.",

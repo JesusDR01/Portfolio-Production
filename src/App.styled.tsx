@@ -5,6 +5,8 @@ export const AppWrapper = styled.div`
 
     .front-component {
         height: 100vh;
+        /* overflow-y: auto; */
+
     }
     .mainSwiper > .swiper-button-next,
     .mainSwiper > .swiper-button-prev {

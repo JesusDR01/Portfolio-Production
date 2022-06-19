@@ -7,16 +7,26 @@ type NavbarProps = {
 };
 
 export const NavbarWrapper = styled.nav<NavbarProps>`
-    position: fixed;
+    position: ${({ show }) => (show ? "fixed" : "unset")};
     display: flex;
-    padding: 35px 45px;
+    padding:  ${({ show }) => (show ? "4px 2px 4px 5px" : "0 45px")}; ;
     width: 100%;
     box-sizing: border-box;
     z-index: 2;
     flex-direction: column;
     transition: opacity 0.3s, height 0.3s;
     opacity: ${({ showOnScroll, expand }) => (showOnScroll || expand ? 1 : 0)};
-
+    height: ${({ show, expand }) => {
+        if (!show){
+            return "90px";
+        }
+        if (expand){
+            return "auto";
+        }
+        return "46px";
+    }
+    } ;
+    overflow: hidden;
     #nav-toggle {
         display: ${({ show }) => (show ? "flex" : "none")};
     }
@@ -40,7 +50,7 @@ export const NavbarWrapper = styled.nav<NavbarProps>`
         caret-color: transparent;
     }
 
-    ul {
+    #scrollActions {
         display: ${({ show }) => (show ? "flex" : "none")};
         height: ${({ show, expand }) => (expand ? "100vh" : "0vh")};
         transition: all 0.3s;
@@ -94,18 +104,26 @@ export const NavbarWrapper = styled.nav<NavbarProps>`
         }
     }
 
+    #media ul{
+        display: ${({ show }) => (show ? "none" : "flex")};
+        margin: 0;
+        img{
+            width: 100%;
+        }
+    }
+
     @media (min-width: 992px) {
         flex-direction: row;
         justify-content: space-between;
         height: initial;
-        ul,
+        #scrollActions,
         #nav-toggle {
             opacity: ${({ showOnScroll }) => (showOnScroll ? 1 : 0)};
         }
         #nav-toggle {
             display: none;
         }
-        ul {
+        #scrollActions {
             display: ${({ show }) => (show ? "flex" : "none")};
             flex-direction: row;
             justify-content: flex-end;

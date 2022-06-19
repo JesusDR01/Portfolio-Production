@@ -3,13 +3,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { SwiperDataSkill } from "src/models/SwiperDataSkill";
 import data from "src/models/data.json";
 import { SecondarySkillsWrapper } from "./SecondarySkills.styled";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 SwiperCore.use([Autoplay, Pagination, Navigation, Lazy]);
 
 let swiperSlides: SwiperDataSkill[] = data.secondarySkills;
 
 export const SecondarySkills = () => {
-    const { t } = useTranslation();
+    const { t } = useTranslation(['projectsPage']);
     return (
         <SecondarySkillsWrapper id="secondary-skills">
             <h2>{t("sections.skills.articles.secondary.title")}</h2>

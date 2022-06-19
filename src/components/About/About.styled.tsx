@@ -5,42 +5,57 @@ export const AboutWrapper = styled.div`
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    width: 66%;
-    
+    > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     p {
         text-align: justify;
         margin-left: 10px;
     }
     img {
-        width: 80%;
         border: 3px solid #c2e4ff;
         border-radius: 20%;
         height: auto;
+        width: 95%;
+        max-width: 350px;
     }
 
-    @media (min-width: 524px) {
+    @media screen and (min-width: 992px) {
+        > div {
+            flex: 1;
+        }
+        p {
+            margin-right: 3vw;
+            font-size: 4rem;
+            flex: 0.6;
+        }
+    }
+
+    /* @media (min-width: 524px) {
         img {
-            max-width: 45%;
+            max-width: 90%;
         }
     }
 
     @media (min-width: 992px) {
         p {
             font-size: 1.5rem;
-            max-width: 55%;
+            max-width: 18%;
         }
         img {
-            max-width: 35%;
+            max-width: 70%;
         }
     }
 
     @media (min-width: 1650px) {
         p {
             font-size: 1.7rem;
-            width: 55%;
+            width: 18%;
         }
         img {
-            width: 25%;
+            width: 90%;
         }
-    }
+    } */
 `;

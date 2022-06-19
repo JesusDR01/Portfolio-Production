@@ -1,10 +1,10 @@
 import Footer from "../Footer/Footer";
 import Skills from "../Skills/Skills";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 import { lazy, Suspense } from "react";
 import { useInView } from "react-intersection-observer";
 const PortfolioLazy = () => {
-    const { t } = useTranslation();
+    const { t } = useTranslation(['projectsPage']);
     const LazyProjects = lazy(() => import("../Projects/Projects"));
     const { ref, inView } = useInView({
         triggerOnce: true,

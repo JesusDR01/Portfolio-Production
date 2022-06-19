@@ -1,9 +1,9 @@
 import Media from "../Media/Media";
 import { FooterWrapper } from "./Footer.styled";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 
 const Footer = () => {
-    const { t } = useTranslation();
+    const { t } = useTranslation(['projectsPage']);
     return (
         <FooterWrapper>
             <Media />

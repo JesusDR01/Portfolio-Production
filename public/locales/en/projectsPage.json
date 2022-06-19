@@ -1,18 +1,6 @@
 {
-    "about": "I am a Vocational and educational training on web application development student from Córdoba, Spain focused in front end development.",
-    "cv": {
-        "title": "Download CV",
-        "url": "assets/cv/JesusDiazRivas_CV_ENG.pdf"
-    },
-    "languageToggler": {
-        "EN": "Show website in english",
-        "ES": "Show website in spanish"
-    },
-    "themeToggler": {
-        "switch": "Change dark/light theme",
-        "light": "Light theme",
-        "dark": "Dark theme"
-    },
+
+
     "sections": {
         "skills": {
             "title": "Skills",
@@ -39,6 +27,8 @@
         "projects": {
             "title": "Projects",
             "descriptions": [
+                "Final studies project. Web application which let you import cryptocurrencies from  Binance, Kucoin and wallets, send and exchange them. As well as query your NFT's.",
+                "Web application which let you download books for free through web scraping to booksvooks.com ",
                 "CLI which allows you to get content from a website and manage global snippets easily using Powertoys run or wox. You can also use OCR to extract text from images.",
                 "Simple game where you have to dodge a red ball with your mouse. You can manage the settings too.",
                 "GUI program built in Java which allows you to save and manage snippets. It is recommended to use with wox or powertoys.",
