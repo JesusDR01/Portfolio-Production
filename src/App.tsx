@@ -15,6 +15,7 @@ import FrontPage from "./components/FrontPage/FrontPage";
 import { GlobalStyles } from "./themes";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "src/themes";
+import { ScrollToTopBtn } from "./components/ScrollToTopBtn/ScrollToTopBtn";
 
 // install Swiper modules
 SwiperCore.use([Autoplay, Navigation, Lazy, Keyboard]);
@@ -23,8 +24,6 @@ const App: React.FC = () => {
     const [theme, setTheme] = useState("dark");
     const [showNav, setShowNav] = useState(false);
     const setThumbsSwiper = (e: any) => {
-        
-        
         setShowNav(e.isEnd);
         const mainArrowNext = document.querySelector<HTMLElement>(".swiper-button-next");
         if (mainArrowNext) {
@@ -47,7 +46,7 @@ const App: React.FC = () => {
                 {<Navbar setTheme={setTheme} show={showNav} />}
                 <Swiper
                     loop={false}
-                    navigation={true}                    
+                    navigation={true}
                     slidesPerColumnFill={0 ? "row" : undefined}
                     slidesPerView={"auto"}
                     autoHeight={true}
@@ -66,6 +65,7 @@ const App: React.FC = () => {
                     <SwiperSlide>
                         <Portfolio />
                     </SwiperSlide>
+                    <ScrollToTopBtn showBelow={250} />
                 </Swiper>
             </AppWrapper>
         </ThemeProvider>

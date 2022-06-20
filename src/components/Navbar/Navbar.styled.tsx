@@ -9,23 +9,25 @@ type NavbarProps = {
 export const NavbarWrapper = styled.nav<NavbarProps>`
     position: ${({ show }) => (show ? "fixed" : "unset")};
     display: flex;
-    padding:  ${({ show }) => (show ? "4px 2px 4px 5px" : "0 45px")}; ;
+    padding: ${({ show }) => (show ? "4px 2px 4px 5px" : "0 45px")};
     width: 100%;
     box-sizing: border-box;
     z-index: 2;
     flex-direction: column;
     transition: opacity 0.3s, height 0.3s;
-    opacity: ${({ showOnScroll, expand, show }) => ( showOnScroll || expand || !show ? 1 : 0)};
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    opacity: ${({ showOnScroll, expand, show }) => (showOnScroll || expand || !show ? 1 : 0)};
     height: ${({ show, expand }) => {
-        if (!show){
+        if (!show) {
             return "90px";
         }
-        if (expand){
+        if (expand) {
             return "auto";
         }
         return "46px";
-    }
-    } ;
+    }};
     overflow: hidden;
     #nav-toggle {
         display: ${({ show }) => (show ? "flex" : "none")};
@@ -50,16 +52,11 @@ export const NavbarWrapper = styled.nav<NavbarProps>`
         caret-color: transparent;
     }
 
-    #scrollActions {
-        display: ${({ show }) => (show ? "flex" : "none")};
-        height: ${({ show, expand }) => (expand ? "100vh" : "0vh")};
-        transition: all 0.3s;
-        transform: translateX(${({ show, expand }) => (show && expand ? "0%" : "200%")});
-        padding-left: 0px;
-        list-style-type: none;
-        flex-direction: column;
+    #name {
         align-items: center;
-
+        transition: all 0.3s;
+        /* transform: translateX(${({ show, expand }) => (show && expand ? "0%" : "200%")}); */
+        transform: translateX(${({ show }) => (show ? "0%" : "200%")});
         a {
             text-decoration: none;
         }
@@ -104,30 +101,27 @@ export const NavbarWrapper = styled.nav<NavbarProps>`
         }
     }
 
-    #media ul{
+    #media ul {
         display: ${({ show }) => (show ? "none" : "flex")};
         margin: 0;
-        img{
+        img {
             width: 100%;
         }
     }
 
     @media (min-width: 992px) {
-        flex-direction: row;
-        justify-content: space-between;
-        #scrollActions,
+        height: ${({ show, expand }) => {
+            if (!show) {
+                return "90px";
+            }
+            return "46px";
+        }};
+        #name,
         #nav-toggle {
-            opacity: ${({ showOnScroll }) => (showOnScroll ? 1 : 0)};
+            opacity: 1;
         }
         #nav-toggle {
             display: none;
-        }
-        #scrollActions {
-            display: ${({ show }) => (show ? "flex" : "none")};
-            flex-direction: row;
-            justify-content: flex-end;
-            margin: 0;
-            transform: translateX(${({ show }) => (show ? "0%" : "200%")});
         }
         #theme-switch {
             width: 70px;

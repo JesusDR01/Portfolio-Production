@@ -1,4 +1,3 @@
-import { SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, Navigation, Scrollbar, Lazy } from "swiper/core";
 import { SwiperDataProject } from "src/models/SwiperDataProject";
 import { ProjectsWrapper } from "./Projects.styled";
@@ -14,6 +13,7 @@ const Projects = () => {
             {swiperSlides.map((project, idx) => (
                 <Project key={idx} idx={idx} data={project} />
             ))}
+
      </ProjectsWrapper>
     );
 };

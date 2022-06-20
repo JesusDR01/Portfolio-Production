@@ -2,20 +2,14 @@ import { Dispatch, SetStateAction, useEffect, useState, memo } from "react";
 import LanguageToggler from "../LanguageToggler/LanguageToggler";
 import { NavbarWrapper } from "./Navbar.styled";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoon, faSun, faBars } from "@fortawesome/free-solid-svg-icons";
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "next-i18next";
 
 import Media from "../Media/Media";
 export const Navbar = memo(
     ({ show = false, setTheme }: { show: boolean; setTheme: Dispatch<SetStateAction<string>> }) => {
         const { t } = useTranslation(["projectsPage", "common"]);
-        const [expandNav, setExpandNav] = useState(false);
-        const liList = [
-            { content: t("sections.projects.title"), href: "#projects" },
-        ];
-        const toggle = () => {
-            setExpandNav(!expandNav);
-        };
+        const [expandNav] = useState(false);
 
         const [showOnScroll, setShowOnScroll] = useState(true);
 
@@ -65,19 +59,11 @@ export const Navbar = memo(
                             <Media />
                         </div>
                     </div>
-                    <button id="nav-toggle" aria-label="Show menu" onClick={toggle}>
-                        <FontAwesomeIcon icon={faBars} />
-                    </button>
+              
                 </div>
-                <ul id="scrollActions">
-                    {liList.map((li, idx) => (
-                        <a key={idx} href={li.href}>
-                            <li tabIndex={0} onClick={toggle}>
-                                {li.content}
-                            </li>
-                        </a>
-                    ))}
-                </ul>
+                <div id="name">
+                    <p>Jesús Díaz Rivas</p>
+                </div>
             </NavbarWrapper>
         );
     }
