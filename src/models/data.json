@@ -116,6 +116,43 @@
             ]
         },
         {
+            "name": "Mastermind",
+            "img": "assets/img/projects/Mastermind.webp",
+            "description": "Popular game made in vanilla JavaScript where you have to guess a secret colours combination.",
+            "repo": "https://github.com/iesgrancapitan-dwec/ud6-a1-mastemind-JesusDR01",
+            "web": "https://iesgrancapitan-dwec.github.io/ud6-a1-mastemind-JesusDR01/",
+            "technologies": [
+                {
+                    "name": "HTML",
+                    "img": "assets/svg/technologies/html.svg"
+                },
+                {
+                    "name": "SCSS/SASS",
+                    "img": "assets/svg/technologies/sass.svg"
+                },
+                {
+                    "name": "Javascript",
+                    "img": "assets/svg/technologies/javascript.svg"
+                }
+            ]
+        },
+        {
+            "name": "Portfolio",
+            "img": "assets/img/projects/Portfolio.webp",
+            "description": "This portfolio!",
+            "repo": "https://github.com/JesusDR01/Portfolio-Production",
+            "technologies": [
+                {
+                    "name": "React",
+                    "img": "assets/svg/technologies/react.svg"
+                },
+                {
+                    "name": "Styled components",
+                    "img": "assets/svg/technologies/styled-components.svg"
+                }
+            ]
+        },
+        {
             "name": "ScrapeJIT",
             "img": "assets/img/projects/ScrapeJIT.svg",
             "description": "CLI which allows you to get content from a website and manage global snippets easily using Powertoys run or wox. You can also use OCR to extract text from images.",
@@ -161,23 +198,6 @@
             ]
         },
         {
-            "name": "Rurals",
-            "img": "assets/img/projects/Rurals.svg",
-            "description": "Static website made with HTML and CSS.",
-            "repo": "https://github.com/iesgrancapitan-diw/practica12-diw-JesusDR01",
-            "web": "https://iesgrancapitan-diw.github.io/practica12-diw-JesusDR01/src/index.html",
-            "technologies": [
-                {
-                    "name": "HTML",
-                    "img": "assets/svg/technologies/html.svg"
-                },
-                {
-                    "name": "SCSS/SASS",
-                    "img": "assets/svg/technologies/sass.svg"
-                }
-            ]
-        },
-        {
             "name": "Calculator",
             "img": "assets/img/projects/Calculator.webp",
             "description": "Simple calculator made with vanilla JavaScript.",
@@ -199,11 +219,11 @@
             ]
         },
         {
-            "name": "Mastermind",
-            "img": "assets/img/projects/Mastermind.webp",
-            "description": "Popular game made in vanilla JavaScript where you have to guess a secret colours combination.",
-            "repo": "https://github.com/iesgrancapitan-dwec/ud6-a1-mastemind-JesusDR01",
-            "web": "https://iesgrancapitan-dwec.github.io/ud6-a1-mastemind-JesusDR01/",
+            "name": "Rurals",
+            "img": "assets/img/projects/Rurals.svg",
+            "description": "Static website made with HTML and CSS.",
+            "repo": "https://github.com/iesgrancapitan-diw/practica12-diw-JesusDR01",
+            "web": "https://iesgrancapitan-diw.github.io/practica12-diw-JesusDR01/src/index.html",
             "technologies": [
                 {
                     "name": "HTML",
@@ -212,26 +232,6 @@
                 {
                     "name": "SCSS/SASS",
                     "img": "assets/svg/technologies/sass.svg"
-                },
-                {
-                    "name": "Javascript",
-                    "img": "assets/svg/technologies/javascript.svg"
-                }
-            ]
-        },
-        {
-            "name": "Portfolio",
-            "img": "assets/img/projects/Portfolio.webp",
-            "description": "This portfolio!",
-            "repo": "https://github.com/JesusDR01/Portfolio-Production",
-            "technologies": [
-                {
-                    "name": "React",
-                    "img": "assets/svg/technologies/react.svg"
-                },
-                {
-                    "name": "Styled components",
-                    "img": "assets/svg/technologies/styled-components.svg"
                 }
             ]
         }

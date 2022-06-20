@@ -27,14 +27,14 @@
             "title": "Proyectos",
             "descriptions": [
                 "Trabajo de fin de estudios. Aplicación web que permite importar criptodivisas de Binance, Kucoin y billeteras, enviarlas e intercambiarlas. Así como consultar NFT's.",
-                "Aplicación web que permite descargar libros de forma gratuita mediante web scraping a booksvooks.com",
+                "Aplicación web que permite descargar libros de forma gratuita.",
+                "Popular juego hecho en vanilla JavaScript donde tienes que adivinar una combinación de colores secreta.",
+                "Este portfolio!",
                 "Interfaz de línea de comandos que te permite obtener contenido de páginas web y manejar snippets globales fácilmente utilizando PowerToys o Wox. También admite OCR para extraer texto a partir de una imagen.",
                 "Simple juego en el que debes esquivar la bola con tu ratón. También puedes cambiar su configuración.",
                 "Programa con interfaz gráfica construido en java que te permite guardar y manejar snippets. Se recomienda usar con wox o powertoys.",
-                "Sitio web estático hecho con HTML y CSS.",
                 "Calculadora simple hecha con vanilla JavaScript.",
-                "Popular juego hecho en vanilla JavaScript donde tienes que adivinar una combinación de colores secreta.",
-                "Este portfolio!"
+                "Sitio web estático hecho con HTML y CSS."
             ],
             "repository": "Repositorio",
             "loading": "Cargando proyectos...",
