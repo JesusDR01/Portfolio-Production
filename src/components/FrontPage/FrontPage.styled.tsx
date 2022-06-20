@@ -8,7 +8,7 @@ export const FrontPageWrapper = styled.div`
     list-style-type: none;
     overflow-y: auto;
     padding: 20px;
-    height: 95vh;
+    height: 84vh;
     h1{
         margin: 0;
         @media screen and (min-width: 992px) {

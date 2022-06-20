@@ -11,7 +11,6 @@ export const AboutWrapper = styled.div`
         align-items: center;
     }
     p {
-        text-align: justify;
         margin-left: 10px;
     }
     img {

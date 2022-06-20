@@ -12,7 +12,7 @@ const Projects = () => {
     return (
         <ProjectsWrapper >
             {swiperSlides.map((project, idx) => (
-                <Project idx={idx} data={project} />
+                <Project key={idx} idx={idx} data={project} />
             ))}
      </ProjectsWrapper>
     );

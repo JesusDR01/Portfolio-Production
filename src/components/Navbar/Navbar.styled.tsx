@@ -15,7 +15,7 @@ export const NavbarWrapper = styled.nav<NavbarProps>`
     z-index: 2;
     flex-direction: column;
     transition: opacity 0.3s, height 0.3s;
-    opacity: ${({ showOnScroll, expand }) => (showOnScroll || expand ? 1 : 0)};
+    opacity: ${({ showOnScroll, expand, show }) => ( showOnScroll || expand || !show ? 1 : 0)};
     height: ${({ show, expand }) => {
         if (!show){
             return "90px";
@@ -115,7 +115,6 @@ export const NavbarWrapper = styled.nav<NavbarProps>`
     @media (min-width: 992px) {
         flex-direction: row;
         justify-content: space-between;
-        height: initial;
         #scrollActions,
         #nav-toggle {
             opacity: ${({ showOnScroll }) => (showOnScroll ? 1 : 0)};
@@ -129,7 +128,6 @@ export const NavbarWrapper = styled.nav<NavbarProps>`
             justify-content: flex-end;
             margin: 0;
             transform: translateX(${({ show }) => (show ? "0%" : "200%")});
-            height: initial;
         }
         #theme-switch {
             width: 70px;

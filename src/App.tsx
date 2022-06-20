@@ -23,6 +23,8 @@ const App: React.FC = () => {
     const [theme, setTheme] = useState("dark");
     const [showNav, setShowNav] = useState(false);
     const setThumbsSwiper = (e: any) => {
+        
+        
         setShowNav(e.isEnd);
         const mainArrowNext = document.querySelector<HTMLElement>(".swiper-button-next");
         if (mainArrowNext) {
@@ -35,6 +37,7 @@ const App: React.FC = () => {
             mainArrowPrev.style.display = showNav ? "block" : "none";
             mainArrowPrev.classList.add("arrow-custom");
         }
+        document.body.style.overflow = showNav ? "auto" : "hidden";
     }, [showNav]);
 
     return (
@@ -44,7 +47,7 @@ const App: React.FC = () => {
                 {<Navbar setTheme={setTheme} show={showNav} />}
                 <Swiper
                     loop={false}
-                    navigation={true}
+                    navigation={true}                    
                     slidesPerColumnFill={0 ? "row" : undefined}
                     slidesPerView={"auto"}
                     autoHeight={true}
